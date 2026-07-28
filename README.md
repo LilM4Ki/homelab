@@ -27,8 +27,8 @@ Em andamento...
 
 - [x] VM atacante dedicada (Kali/Parrot) rodando nativamente no Proxmox, em bridge isolado
 - [x] Alternância de acesso à internet da rede de ataque conforme o contexto de uso (CTFs vs. lab interno)
-- [] Monitoramento e alertas de tráfego tanto na rede de ataque quanto nos alvos, para validar que nenhum tráfego fora do esperado está passando pela regra de liberação manual
-- [] Regras customizadas no Wazuh para detectar os próprios ataques executados nos labs (abordagem Purple Team)
+- [ ] Monitoramento e alertas de tráfego tanto na rede de ataque quanto nos alvos, para validar que nenhum tráfego fora do esperado está passando pela regra de liberação manual
+- [ ] Regras customizadas no Wazuh para detectar os próprios ataques executados nos labs (abordagem Purple Team)
 
 ## Nota
 
