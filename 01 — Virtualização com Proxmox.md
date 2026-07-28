@@ -21,14 +21,14 @@ O Proxmox VE foi instalado diretamente em um servidor Dell PowerEdge T420, atuan
 |OWASP BWA |	1  | 1 GB  |	Alvo vulnerável|
 |Wazuh Server |	4  |	8 GB  |	SIEM|
 
-## Redes virtuais (vmbr)
+## Redes virtuais (`vmbr`)
 
-O Proxmox permite criar múltiplas Linux Bridges (vmbr), cada uma funcionando como um switch virtual independente. Nesse homelab, foram criadas três:
+O Proxmox permite criar múltiplas Linux Bridges (`vmbr`), cada uma funcionando como um switch virtual independente. Nesse homelab, foram criadas três:
 
 |Bridge  |	Porta física associada |	Propósito|
 | --- | --- | --- |
-|vmbr0 |	Sim (uplink para a rede doméstica) |	Gestão do host e saída padrão para a LAN|
-|vmbr1 |	Não |	Rede alvo isolada (10.0.0.0/24) — onde vivem os labs vulneráveis|
-|vmbr2	| Não  |	Rede de ataque isolada (10.0.1.0/24) — onde vive a VM do Kali|
+|`vmbr0` |	Sim (uplink para a rede doméstica) |	Gestão do host e saída padrão para a LAN|
+|`vmbr1` |	Não |	Rede alvo isolada (10.0.0.0/24) — onde vivem os labs vulneráveis|
+|`vmbr2`	| Não  |	Rede de ataque isolada (10.0.1.0/24) — onde vive a VM do Kali|
 
-***O ponto central da segmentação: vmbr1 e vmbr2 não têm nenhuma porta física de rede associada. Elas existem só dentro do Proxmox, então tudo que trafega nelas fica confinado ao próprio host, sujeito apenas às regras do pfSense  ver [( 02 — Roteamento e Firewall)](https://github.com/LilM4Ki/homelab/blob/main/02%20%E2%80%94%20Roteamento%20e%20Firewall%20com%20pfSense.md).***
+> **O ponto central da segmentação: vmbr1 e vmbr2 não têm nenhuma porta física de rede associada. Elas existem só dentro do Proxmox, então tudo que trafega nelas fica confinado ao próprio host, sujeito apenas às regras do pfSense  ver [( 02 — Roteamento e Firewall)](https://github.com/LilM4Ki/homelab/blob/main/02%20%E2%80%94%20Roteamento%20e%20Firewall%20com%20pfSense.md).**
