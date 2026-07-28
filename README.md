@@ -23,9 +23,12 @@ Monitoramento - SIEM Wazuh
 
 - [x] [Virtualização com Proxmox](https://github.com/LilM4Ki/homelab/blob/main/01%20—%20Virtualização%20com%20Proxmox.md)
 - [x] [Roteamento e Firewall com pfSense](https://github.com/LilM4Ki/homelab/blob/main/02%20—%20Roteamento%20e%20Firewall%20com%20pfSense.md)
-- [ ]Serviços base — DNS e Samba
-- [ ]Monitoramento — Wazuh SIEM
-- [ ]Simulação de ataque e defesa
+
+### Em andamento...
+
+- [ ] Serviços base — DNS e Samba
+- [ ] Monitoramento — Wazuh SIEM
+- [ ] Simulação de ataque e defesa
 
 ## Roadmap
 
