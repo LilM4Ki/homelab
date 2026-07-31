@@ -102,9 +102,10 @@ user@servidor:/$ ls -ls /pasta_principal
 ```
 > **Isolamento de Usuário:**
 > - Para garantir a privacidade na pasta_pessoal, aplicou-se o Princípio do Menor Privilégio. A pasta é configurada como estritamente leitura (read only = yes) para todos os membros do grupo validados. A única exceção para gravação é dada através da diretiva write list = user1, garantindo que apenas o dono legítimo possa alterar seus arquivos, enquanto a administração permanece padronizada.
->
 > **Máscaras de Criação Restritas:**
 > - **create mask = 0640 e directory mask** = 0750: Diferente da pasta pública, a pasta pessoal adota um perfil onde o dono tem controle total (leitura/escrita), o grupo tem apenas permissão de leitura, e o restante da rede não tem acesso, alinhando a segurança do Samba perfeitamente com a segurança física do Linux.
+
+> Nota de contexto — doméstico vs corporativo: as regras aqui foram desenhadas para um ambiente doméstico, onde a leitura compartilhada entre os membros do grupo é aceitável e até desejável para colaboração. Em um ambiente corporativo, o mesmo princípio de menor privilégio seria aplicado de forma mais restritiva: o acesso de leitura não seria concedido por padrão, apenas mediante necessidade explícita (need-to-know), com cada compartilhamento avaliado individualmente conforme a sensibilidade dos dados.
 
 ## Alocação de recursos
 
