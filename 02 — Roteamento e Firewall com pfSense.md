@@ -2,7 +2,7 @@
 
 ## Interfaces
 
-Não usei VLANs — a segmentação é feita através de interfaces físicas/virtuais distintas do pfSense, cada uma amarrada a um `vmbr` diferente (ver [01 — Virtualização com Proxmox](https://github.com/LilM4Ki/homelab/blob/main/01%20%E2%80%94%20Virtualiza%C3%A7%C3%A3o%20com%20Proxmox.md)):
+O pfSense roda como VM dentro do Proxmox. Não usei VLANs — a segmentação é feita através de interfaces físicas/virtuais distintas do pfSense, cada uma amarrada a um `vmbr` diferente (ver [01 — Virtualização com Proxmox](https://github.com/LilM4Ki/homelab/blob/main/01%20%E2%80%94%20Virtualiza%C3%A7%C3%A3o%20com%20Proxmox.md)):
 
 | Interface pfSense | Bridge | Rede | Papel |
 |---|---|---|---|
