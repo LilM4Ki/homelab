@@ -6,27 +6,28 @@ Este repositório documenta, passo a passo, a infraestrutura de um homelab pesso
 
 A ideia central: ter um ambiente vulnerável de propósito para atacar — e um SIEM observando tudo — sem colocar em risco a minha própria rede doméstica.
 
-<img width="3200" height="2000" alt="diagrama-rede-homelab" src="https://github.com/user-attachments/assets/f40e5410-8f77-43a1-a3f5-4ac611993476" />
+<img width="3200" height="2000" alt="diagrama-rede-homelab" src="https://github.com/user-attachments/assets/e5fa6b14-9052-4508-99a1-fd620490431e" />
 
 ## Stack utilizada
 
-Hardware - Dell PowerEdge T420 (2x Xeon E5-2403 v2, ~31 GB RAM)
-Hypervisor - Proxmox VE
-Firewall - roteamento	pfSense
-Ataque - Kali Linux
-Alvos - OWASP Juice Shop, DVWA, OWASP BWA
-DNS/rede - Pi-hole
-Compartilhamento de arquivos - Samba (File_Server para casa)
-Monitoramento - SIEM Wazuh
+- Hardware: Dell PowerEdge T420 (2x Xeon E5-2403 v2, ~31 GB RAM)
+- Hypervisor: Proxmox VE
+- Máquina de administração: MacBook (Apple Silicon M1) — acesso remoto controlado às redes isoladas
+- Firewall: pfSense (VM) - segmentação e roteamento entre as redes
+- Ataque: Kali Linux
+- Alvos: OWASP Juice Shop, DVWA, OWASP BWA
+- DNS/rede: Pi-hole
+- Compartilhamento de arquivos: Samba (File Server para casa)
+- Monitoramento/SIEM: Wazuh
 
 ## Índice da documentação
 
 - [x] [Virtualização com Proxmox](https://github.com/LilM4Ki/homelab/blob/main/01%20—%20Virtualização%20com%20Proxmox.md)
 - [x] [Roteamento e Firewall com pfSense](https://github.com/LilM4Ki/homelab/blob/main/02%20—%20Roteamento%20e%20Firewall%20com%20pfSense.md)
+- [x] [Serviços base — DNS e Samba](https://github.com/LilM4Ki/homelab/blob/main/03%20-%20Serviços%20Base%20-%20DNS%20e%20Samba.md)
 
 ### Em andamento...
 
-- [ ] Serviços base — DNS e Samba
 - [ ] Monitoramento — Wazuh SIEM
 - [ ] Simulação de ataque e defesa
 
@@ -41,4 +42,4 @@ Monitoramento - SIEM Wazuh
 
 Endereços IP e detalhes específicos da rede doméstica foram omitidos ou generalizados intencionalmente. O objetivo é documentar **decisões de arquitetura e segurança**, não expor a topologia real da minha rede.
 
-Autor: Renan · Em transição de carreira para Segurança da Informação [LinkedIn](https://www.linkedin.com/in/renan-rodrigues-makiya-636a951b3/)
+Autor: Renan Rodrigues Makiya · Em transição de carreira para Segurança da Informação [LinkedIn](https://www.linkedin.com/in/renan-rodrigues-makiya-636a951b3/)
